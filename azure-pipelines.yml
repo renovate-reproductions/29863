@@ -1,0 +1,25 @@
+## See https://dev.azure.com/cdcbigdatademo/DEMO_SHARED/_git/azure_devops_resources
+resources:
+  repositories:
+    - repository: tox
+      type: github
+      endpoint: github
+      name: tox-dev/azure-pipelines-template
+      ref: refs/tags/0.1
+
+stages:
+  - stage: test
+    displayName: Test issue
+    jobs:
+      - job: test_job
+        displayName: Run simple steps
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+
+          - task: Bash@3
+            displayName: 'This is a simple test task'
+            inputs:
+              targetType: 'inline'
+              script: |
+                echo "Hello world !"
