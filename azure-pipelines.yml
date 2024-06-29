@@ -26,12 +26,12 @@ stages:
               targetType: 'inline'
               script: |
                 echo "Hello world !"
-      # Maven v3
-  # Build, test, and deploy with Apache Maven.
-  - task: Maven@3
-    inputs:
-      mavenPOMFile: 'pom.xml' # string. Required. Maven POM file. Default: pom.xml.
-      goals: 'org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate' # string. Goal(s). Default: package.
-      options: -Dexpression='project.description' # string. Options.
-      # JUnit Test Results
-      publishJUnitResults: false # boolean. Publish to Azure Pipelines. Default: true.
+          # Maven v3
+          # Build, test, and deploy with Apache Maven.
+          - task: Maven@3
+            inputs:
+              mavenPOMFile: 'pom.xml' # string. Required. Maven POM file. Default: pom.xml.
+              goals: 'org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate' # string. Goal(s). Default: package.
+              options: -Dexpression='project.description' # string. Options.
+              # JUnit Test Results
+              publishJUnitResults: false # boolean. Publish to Azure Pipelines. Default: true.
