@@ -3,7 +3,7 @@
   "extends": [
     "config:best-practices",
     ":automergeRequireAllStatusChecks",
-    ":disableDependencyDashboard",
+    ":dependencyDashboard",
     ":labels(renovate, dependencies)",
     ":prHourlyLimitNone",
     ":rebaseStalePrs"
