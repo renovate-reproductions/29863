@@ -7,6 +7,9 @@ resources:
       name: tox-dev/azure-pipelines-template
       ref: refs/tags/0.1
 
+trigger:
+  batch: true
+
 stages:
   - stage: test
     displayName: Test issue
