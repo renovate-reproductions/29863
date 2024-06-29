@@ -29,9 +29,9 @@ stages:
           # Maven v3
           # Build, test, and deploy with Apache Maven.
           - task: Maven@3
+            displayName: This is is simple maven task to illustrate the version update
             inputs:
               mavenPOMFile: 'pom.xml' # string. Required. Maven POM file. Default: pom.xml.
-              goals: 'org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate' # string. Goal(s). Default: package.
-              options: -Dexpression='project.description' # string. Options.
+              goals: "org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression='project.description' --no-transfer-progress" # string. Goal(s). Default: package.
               # JUnit Test Results
               publishJUnitResults: false # boolean. Publish to Azure Pipelines. Default: true.
